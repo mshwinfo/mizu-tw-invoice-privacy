@@ -1,1 +1,96 @@
-# mizu-tw-invoice-privacy
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>隱私權政策｜台灣統一發票助手</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 20px 80px;
+    line-height: 1.75;
+    color: #1c1c1e;
+    background: #f2f3f5;
+  }
+  h1 { font-size: 24px; margin-bottom: 4px; }
+  .updated { color: #7c8090; font-size: 14px; margin-bottom: 32px; }
+  h2 { font-size: 18px; margin-top: 36px; border-left: 4px solid #2f6bff; padding-left: 10px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; background: #fff; border-radius: 8px; overflow: hidden; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #eee; font-size: 14px; vertical-align: top; }
+  th { background: #eef2ff; color: #2f6bff; }
+  code { background: #eee; padding: 2px 6px; border-radius: 4px; font-size: 13px; }
+  a { color: #2f6bff; }
+  .box { background: #fff; padding: 16px 20px; border-radius: 12px; margin: 16px 0; }
+</style>
+</head>
+<body>
+
+<h1>隱私權政策</h1>
+<p class="updated">適用 App：台灣統一發票助手（net.csinno.twinvoice）｜最後更新：2026 年 7 月</p>
+
+<div class="box">
+<strong>一句話總結：</strong>你的發票資料、載具條碼只存在你自己的裝置裡，我們沒有伺服器、沒有帳號系統，
+不會收集、也沒有能力收集你的個人資料。
+</div>
+
+<h2>1. 我們不收集什麼</h2>
+<ul>
+  <li>不需要註冊帳號、不需要登入，也不會收集姓名、電話、Email 等個人身分資訊。</li>
+  <li>不使用任何第三方分析或廣告追蹤 SDK（例如 Google Analytics、廣告聯播網）。</li>
+  <li>不會把你掃描或輸入的發票資料、載具條碼上傳到任何伺服器——因為我們根本沒有這樣的伺服器。</li>
+</ul>
+
+<h2>2. 資料存在哪裡</h2>
+<p>以下資料只會保存在你的裝置本機（HarmonyOS 系統資料庫 / 加密憑證儲存區），解除安裝 App 就會一併清除：</p>
+<table>
+  <tr><th>資料</th><th>用途</th><th>儲存方式</th></tr>
+  <tr><td>發票號碼、日期、金額、購買品項、對獎結果</td><td>掃描補登、對獎、年度總覽</td><td>本機資料庫</td></tr>
+  <tr><td>手機條碼（載具）</td><td>結帳出示、桌面卡片顯示</td><td>本機加密憑證儲存區（Asset Store）</td></tr>
+  <tr><td>賣方統一編號 → 店名對照</td><td>避免重複查詢，加快列表顯示</td><td>本機資料庫快取</td></tr>
+</table>
+<p>「備份與還原」功能匯出的備份檔，只會寫到你自己選擇的檔案位置（例如你自己的雲端硬碟 App 目錄）；
+你可以選擇設定密碼加密備份檔，密碼只有你自己知道，我們不會經手也無法取得。</p>
+
+<h2>3. 會連到網路的地方</h2>
+<p>App 部分功能需要連網才能運作，以下是完整清單，沒有列出的網址就代表 App 不會連過去：</p>
+<table>
+  <tr><th>連線對象</th><th>用途</th><th>會傳送什麼出去</th></tr>
+  <tr>
+    <td>財政部電子發票整合服務平台開放資料<br><code>dataset.einvoice.nat.gov.tw</code></td>
+    <td>用賣方統一編號查詢店家名稱</td>
+    <td>只有賣方的統一編號（公開的營業登記資訊，不是你的個人資料）</td>
+  </tr>
+  <tr>
+    <td>GitHub（<code>raw.githubusercontent.com/mshwinfo/mizu-tw-invoice-privacy</code>）</td>
+    <td>下載每期統一發票中獎號碼、雲端發票專屬獎清單（每日由官方公告資料整理更新）</td>
+    <td>不傳送任何資料，單純下載公開檔案</td>
+  </tr>
+</table>
+<p>對獎比對、統編檢查碼驗證等運算，全部在你的裝置上本機完成，不會把你的發票資料送到任何地方比對。</p>
+
+<h2>4. App 內的外部連結</h2>
+<p>「關於」頁面與中獎號碼頁面提供幾個外部連結（財政部官網查詢頁、Ko-fi／綠界贊助頁面），
+點擊後會用系統瀏覽器開啟，這些屬於對應網站自己的隱私權政策範圍，與本 App 無關。</p>
+
+<h2>5. 系統權限用途</h2>
+<table>
+  <tr><th>權限</th><th>用途</th></tr>
+  <tr><td>相機</td><td>掃描發票 QR Code 補登資料，不會儲存或上傳拍攝到的畫面</td></tr>
+  <tr><td>網際網路 / 網路狀態</td><td>如上述第 3 點的兩個連線用途</td></tr>
+  <tr><td>發送提醒通知</td><td>單數月 25 日開獎日提醒，完全在裝置本機排程，不經過任何推播伺服器</td></tr>
+</table>
+
+<h2>6. 兒童隱私</h2>
+<p>本 App 不特別鎖定兒童使用者，也不會刻意收集兒童的個人資料。</p>
+
+<h2>7. 政策異動</h2>
+<p>若本 App 未來新增需要連網或收集資料的功能，會在更新這頁內容並調整上方「最後更新」日期後才會上線，
+不會無聲無息地改變資料處理方式。</p>
+
+<h2>8. 聯絡我們</h2>
+<p>對這份隱私權政策有任何問題，歡迎來信：<a href="mailto:mizuhara@mshw.info">mizuhara@mshw.info</a></p>
+
+</body>
+</html>
