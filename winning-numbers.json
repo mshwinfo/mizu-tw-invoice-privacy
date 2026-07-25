@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-16",
+  "updatedAt": "2026-07-25",
   "periods": {
     "11502": {
       "special": "87510041",
@@ -22,9 +22,13 @@
       "additionalSixth": []
     },
     "11506": {
-      "special": "",
-      "grand": "",
-      "first": [],
+      "special": "38548029",
+      "grand": "10138845",
+      "first": [
+        "24121106",
+        "28589937",
+        "83663333"
+      ],
       "additionalSixth": []
     }
   }
